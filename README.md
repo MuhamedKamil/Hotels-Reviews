@@ -13,9 +13,9 @@ reviews which can be positive or negative.
 
 Using elasticsearch to index all data founded in the dataset for hotel. each hotel have only one document with all its data.
 
-3- simple classifier
+3- Simple classifier
 
-I built a logistic regression model for sentiment analysis task to classify hotel guest reviews using data included in the dataset folder
+I built a logistic regression model for sentiment analysis task to classify hotel guest reviews using data included in the dataset folder.
 
 Dataset Link https://www.kaggle.com/anu0012/hotel-review/data
 
