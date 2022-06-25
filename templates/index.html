@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Hotel Sentiment Analyzer</title>
+  <link href="static/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="analyzer">
+<form class="form-inline" method="POST" action="/Score">
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">Select Hotel Name</span>
+        <select name="comp_select" class="selectpicker form-control">
+            {% for name in hotel_names %}
+                <option value="{{ name }}">{{ name }}</option>
+             {% endfor %}
+        </select>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+</form>
+</div>
+
+<div class="analyzer_score">
+{% if pos %}
+<table class="scores">
+      <caption>Result</caption>
+
+  <tr>
+    <th>Hotel Name</th>
+    <th>Positive Score</th>
+    <th>Negative Score</th>
+  </tr>
+  <tr>
+    <td>{{selected_hotel}}</td>
+    <td>{{pos}}</td>
+    <td>{{neg}}</td>
+  </tr>
+</table>
+{% endif %}
+</div>
+{% if response %}
+<div class="search_res">
+    <h3>{{selected_hotel}}</h3>
+
+<pre>{{response}}</pre>
+
+</div>
+{% endif %}
+
+</body>
+</html>

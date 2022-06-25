@@ -1,0 +1,45 @@
+.scores {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.scores caption {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.scores tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.scores th, table td {
+  padding: .625em;
+  text-align: center;
+}
+
+.scores th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.analyzer {
+    position:absolute;
+    top: 20%;
+    left: 25%;
+
+}
+.analyzer_score {
+    position:absolute;
+    top: 25%;
+}
+.search_res {
+    position:absolute;
+    top: 50%;
+}
